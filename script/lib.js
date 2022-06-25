@@ -174,7 +174,7 @@ function cleanPrepareDist() {
   if (fs.existsSync(distPath)) {
     rmDir(distPath);
   }
-  fs.mkdirSync(distPath);
+  fs.mkdirSync(distPath, { recursive: true });
   fs.mkdirSync(path.join(distPath, styleFolder));
   fs.mkdirSync(path.join(distPath, scriptFolder));
 }
